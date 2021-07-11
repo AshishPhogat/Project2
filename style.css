@@ -7,4 +7,5 @@
 body{
     font-family:"Poppins",sans-serif;
     background-color:#ebf2ff;
+    overflow-x:hidden;
 }
