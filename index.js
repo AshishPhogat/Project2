@@ -23,7 +23,7 @@ const newCard = ({ id, imageUrl, tasktitle, tasktype, taskdescription }) =>
     <span class="badge bg-primary">${tasktype}</span></h5>
   </div>
   <div class="card-footer text-muted ">
-    <button type="button" class="btn btn-outline-primary float-end" id=${id} >Open Task</button>
+    <button type="button" class="btn btn-outline-primary float-end" id=${id}  >Open Task</button>
   </div>
 </div>
 </div>`;
@@ -161,7 +161,15 @@ const saveEditChanges=(event)=>{
     return task;
   });
   updateLocalStorage();
+  console.log(globalStore);
+  taskTitle.setAttribute("contenteditable","false");
+  taskDescription.setAttribute("contenteditable","false");
+  taskType.setAttribute("contenteditable","false");
+  submitButton.innerHTML="Open Task";
+  submitButton.removeAttribute("onclick");
 };
 
+
+
 // edit->😎
-// open
+// open->😎
